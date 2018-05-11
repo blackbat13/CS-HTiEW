@@ -9,3 +9,6 @@ Dydaktyka informatyki jest dużym wyzwaniem, szczególnie w szkole. Do tej pory 
 - Wstęp do algorytmów
 - Wstęp do funkcji
 - Wstęp do rekurencji
+
+
+Materiały publikowane są na licencji **CC Uznanie Autorstwa-Na tych samych warunkach 4.0**
