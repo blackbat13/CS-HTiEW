@@ -7,6 +7,7 @@ Dydaktyka informatyki jest dużym wyzwaniem, szczególnie w szkole. Do tej pory 
 
 ### Opracowane do tej pory tematy:
 - Wstęp do algorytmów
+- Wsęp do zmiennych
 - Wstęp do funkcji
 - Wstęp do rekurencji
 
