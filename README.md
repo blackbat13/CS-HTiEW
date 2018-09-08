@@ -18,7 +18,7 @@ Każdy temat zawiera komplet materiałów potrzebnych do przeprowadzenia lekcji.
 
 Korzystając z naszych materiałów proszę mieć na uwadze, że Trudne Tematy w Najprostszy Sposób jest projektem podlegającym ciągłemu rozwojowi. Wraz z przeprowadzaniem kolejnych tematów w różnych klasach, a także pod wpływem dyskusji z innymi dydaktykami, forma niektórych lekcji może ulegać zmianie, oczywiście na lepsze. Warto więc tutaj od czasu do czasu zaglądać aby sprawdzić, czy nie pojawiło się coś nowego.
 
-Osoby, które skorzystają z naszych materiałów, chcielibyśmy prosić o wypełnienie ankiety i przesłanie jej nam, tak abyśmy mieli możliwość zweryfikowania naszej propozycji i uczynienia jej jeszcze lepszą. W razie wszelkich uwag i sugestii prosimy także o kontakt z nami.
+Osoby, które skorzystają z naszych materiałów, chcielibyśmy prosić o wypełnienie protokołu z realizacji, zawartego w każdym temacie, i przesłanie go nam, tak abyśmy mieli możliwość zweryfikowania naszej propozycji i uczynienia jej jeszcze lepszą. W razie wszelkich uwag i sugestii prosimy także o kontakt z nami.
 
 ### Autorzy
 
