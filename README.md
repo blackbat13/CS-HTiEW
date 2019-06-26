@@ -1,5 +1,6 @@
 # CS-HTiEW
 Computer Science - Hard Topics in Easiest Way
+
 If you are interested in seeing this project translated into English language, please contact me.
 
 # Trudne Tematy w Najprostszy Sposób
