@@ -11,6 +11,7 @@ Dydaktyka informatyki jest dużym wyzwaniem, szczególnie w szkole. Do tej pory 
 - Wstęp do algorytmów
 - Wstęp do zmiennych
 - Wstęp do funkcji
+- Globalność i lokalność zmiennych
 - Wstęp do rekurencji
 
 ### Wykorzystanie
