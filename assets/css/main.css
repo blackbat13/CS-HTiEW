@@ -3524,3 +3524,7 @@ button:disabled,
     max-width: 150px;
     margin-left: 25%;
 }
+
+.clear {
+    clear: both;
+}
