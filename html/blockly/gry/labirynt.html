@@ -7,9 +7,9 @@
 <html lang="pl">
 <head>
     <title>TTwNS - Gry Blockly - Labirynt</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="../../../assets/css/main.css" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="../../../assets/css/main.css"/>
 </head>
 <body class="is-preload">
 
@@ -31,9 +31,154 @@
                     <h1>Gry Blockly - Labirynt</h1>
                 </header>
 
-                <p>Link do gry: <a href="">https://blockly.games/maze?lang=pl</a></p>
+                <p>
+                    Link do gry: <a href="https://blockly.games/maze?lang=pl">https://blockly.games/maze?lang=pl</a>
+                </p>
 
-                <p>Tutaj znaleźć można instrukcje krok po kroku pokazujące, jak rozwiązać kolejne ćwiczenia w grach Blockly.</p>
+                <hr class="major clear"/>
+                <h2 id="zad1">Zadanie 1</h2>
+                <p>
+                    <span class="image left">
+                        <img src="../../../assets/images/blockly_labirynt_zad1.png" alt=""/>
+                    </span>
+                    Poruszamy się do przodu.
+                </p>
+
+                <hr class="major clear"/>
+                <h2 id="zad2">Zadanie 2</h2>
+                <p>
+                    <span class="image left">
+                        <img src="../../../assets/images/blockly_labirynt_zad2.png" alt=""/>
+                    </span>
+                    Poruszamy się do przodu i skręcamy.
+                </p>
+
+                <hr class="major clear"/>
+                <h2 id="zad3">Zadanie 3</h2>
+                <p>
+                    <span class="image left">
+                        <img src="../../../assets/images/blockly_labirynt_zad3.png" alt=""/>
+                    </span>
+                </p>
+                <ul>
+                    <li>Możemy wykorzystać jedynie dwa bloki.</li>
+                    <li>Jednak droga wymagałaby użycia instrukcji idź naprzód co najmniej 6 razy.</li>
+                    <li>Wymusza to zastosowanie <b>pętli</b> – struktury wymuszającej powtarzanie instrukcji.</li>
+                </ul>
+
+                <hr class="major clear"/>
+                <h2 id="zad4">Zadanie 4</h2>
+                <p>
+                    <span class="image left">
+                        <img src="../../../assets/images/blockly_labirynt_zad4a.png" alt=""/>
+                    </span>
+                    Powtarzalny schemat poruszania się po labiryncie.
+                </p>
+                <hr class="clear" />
+                <p>
+                    <span class="image left">
+                        <img src="../../../assets/images/blockly_labirynt_zad4.png" alt=""/>
+                    </span>
+                </p>
+                <ul>
+                    <li>Ponownie ilość kroków do wykonania przekracza limit bloków zadania.</li>
+                    <li>Zauważmy jednak, że możemy wyróżnić powtarzalny schemat poruszania się po labiryncie.</li>
+                    <li>Szukamy minimalnej powtarzalnej ilości kroków – zestawu instrukcji.</li>
+                </ul>
+
+                <hr class="major clear"/>
+                <h2 id="zad5">Zadanie 5</h2>
+                <p>
+                    <span class="image left">
+                        <img src="../../../assets/images/blockly_labirynt_zad5.png" alt=""/>
+                    </span>
+                </p>
+                <ul>
+                    <li>Możemy zauważyć, że fragment drogi można przejść powtarzając instrukcję idź naprzód.</li>
+                    <li>Jednak najpierw musimy dotrzeć do tego fragmentu.</li>
+                    <li>Co robimy przy pomocy dwóch instrukcji idź naprzód i instrukcji skręć w lewo.</li>
+                    <li>
+                        Zauważmy, że zapis algorytmu składa się z dwóch części:
+                        <ul>
+                            <li>Pierwszej - liniowej.</li>
+                            <li>Drugiej - pętli.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <hr class="major clear"/>
+                <h2 id="zad6">Zadanie 6</h2>
+                <p>
+                    <span class="image left">
+                        <img src="../../../assets/images/blockly_labirynt_zad6.png" alt=""/>
+                    </span>
+                </p>
+                <ul>
+                    <li>W tym zadaniu dochodzi nowa instrukcja: instrukcja warunkowa.</li>
+                    <li>Zauważmy, że będziemy wykonywać jedynie skręt w lewo.</li>
+                    <li>Cały czas idziemy naprzód.</li>
+                    <li>A jeśli jest możliwość skrętu w lewo, to skręcamy.</li>
+                </ul>
+
+                <hr class="major clear"/>
+                <h2 id="zad7">Zadanie 7</h2>
+                <p>
+                    <span class="image left">
+                        <img src="../../../assets/images/blockly_labirynt_zad7a.png" alt=""/>
+                    </span>
+                    Zauważmy, że najprostsza droga do celu to skręcenie trzy razy w prawo.
+                </p>
+                <hr class="clear" />
+                <p>
+                    <span class="image left">
+                        <img src="../../../assets/images/blockly_labirynt_zad7.png" alt=""/>
+                    </span>
+                </p>
+                <ul>
+                    <li>Poruszamy się więc cały czas prosto.</li>
+                    <li>A jak możemy skręcić w prawo, to skręcamy.</li>
+                </ul>
+
+
+                <hr class="major clear"/>
+                <h2 id="zad8">Zadanie 8</h2>
+                <p>
+                    <span class="image left">
+                        <img src="../../../assets/images/blockly_labirynt_zad8.png" alt=""/>
+                    </span>
+                </p>
+                <ul>
+                    <li>Zauważmy, że w tym zadaniu nie możemy zabłądzić.</li>
+                    <li>Droga nie ma rozgałęzień.</li>
+                    <li>Wystarczy, że będziemy skręcać razem z drogą.</li>
+                    <li>Dlatego poruszamy się cały czas prosto.</li>
+                    <li>I sprawdzamy, czy mamy możliwość wykonania skrętu w lewo lub prawo.</li>
+                </ul>
+
+                <hr class="major clear"/>
+                <h2 id="zad9">Zadanie 9</h2>
+                <p>
+                    <span class="image left">
+                        <img src="../../../assets/images/blockly_labirynt_zad9a.png" alt=""/>
+                    </span>
+                    Zwróćmy uwagę na to, jak wygląda najprostsza droga do celu.
+                </p>
+                <hr class="clear" />
+                <p>
+                    <span class="image left">
+                        <img src="../../../assets/images/blockly_labirynt_zad9.png" alt=""/>
+                    </span>
+                </p>
+                <ul>
+                    <li>Łatwo zauważyć, że jedyny skręt jaki wykonamy, to skręt w lewo.</li>
+                    <li>Jednak nie chcemy skręcać zawsze, gdy ścieżka prowadzi w lewo.</li>
+                    <li>Skręcamy tylko wtedy, gdy nie możemy już iść prosto.</li>
+                    <li>Dlatego używamy pełnej instrukcji warunkowej.</li>
+                </ul>
+
+                <hr class="major clear"/>
+                <h2 id="zad10">Zadanie 10</h2>
+
             </section>
 
         </div>
