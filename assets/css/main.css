@@ -3528,3 +3528,8 @@ button:disabled,
 .clear {
     clear: both;
 }
+
+pre.line-numbers > code {
+    overflow: visible;
+    padding: 0;
+}
