@@ -6,12 +6,13 @@
 -->
 <html lang="pl">
 <head>
-    <title>TTwNS - Python - Algorytmy</title>
+    <title>TTwNS - Python - Problem n królowych</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <link rel="stylesheet" href="../../../assets/css/main.css"/>
+    <link rel="stylesheet" href="../../../assets/css/prism.css"/>
 </head>
-<body class="is-preload">
+<body class="is-preload line-numbers">
 
 <!-- Wrapper -->
 <div id="wrapper">
@@ -28,55 +29,55 @@
             <!-- Content -->
             <section>
                 <header class="main">
-                    <h1>Python - Algorytmy</h1>
+                    <h1>Python - Problem n królowych</h1>
                 </header>
 
-                <p>Implementacje wybranych algorytmów w języku Python 3.</p>
+                <figure>
+                    <figcaption></figcaption>
+                    <pre>
+                        <code contenteditable spellcheck="false" class="language-python">
+def find_solution(n: int, queen_id: int, positions: list) -> bool:
+    if queen_id == n:
+        return True
+
+    for i in range(n):
+        if not check_new_position(queen_id, i, positions):
+            continue
+
+        positions[queen_id] = i
+        if find_solution(n, queen_id + 1, positions):
+            return True
+
+    return False
+
+
+def check_new_position(x: int, y: int, positions: list) -> bool:
+    for i in range(0, x):
+        if positions[i] == y:
+            return False
+        if y - positions[i] == x - i:
+            return False
+
+    return True
+
+
+n: int = 5
+positions: list = [0 for _ in range(n)]
+result: bool = find_solution(n, 0, positions)
+if result:
+    print(positions)
+else:
+    print("No result exists")
+                        </code>
+                    </pre>
+                </figure>
+
                 <p>
-                    Tutaj znajdują się jedynie implementacje z krótkim opisem kodu.
-                    Opisy poszczególnych algorytmów można znaleźć tutaj: <a href="#">Algorytmy</a>.
+                    Funkcja <code class="language-python">check_new_position</code> sprawdza, czy możemy ustawić nową
+                    królową na podanej pozycji (x,y). <br/>
+                    Instrukcja <code class="language-python">if positions[i] == y:</code> sprawdza, czy poprzednia królowa jest już ustawiona w wierszu y. <br/>
+                    Instrukcja <code class="language-python">if y - positions[i] == x - i:</code> sprawdza, czy poprzednia królowa atakuje sprawdzaną pozycję diagonalnie. <br/>
                 </p>
-                <p>
-                    Wszystkie implementacje są w języku angielskim, ponieważ jest to główny język wykorzystywany w
-                    programowaniu.
-                </p>
-
-                <hr />
-
-                <h2>Algorytmy na liczbach całkowitych</h2>
-                <ul>
-                    <li><a href="test_pierwszosci.html">Test pierwszości</a></li>
-                    <li><a href="czynniki_pierwsze.html">Rozkład na czynniki pierwsze</a></li>
-                    <li><a href="doskonale.html">Test doskonałości</a></li>
-                    <li><a href="fibonacci.html">Liczby Fibonacciego</a></li>
-                    <li><a href="nwd.html">NWD</a></li>
-                    <li><a href="wydawanie_reszty.html">Wydawanie reszty</a></li>
-                    <li><a href="sito_eratostenesa.html">Sito Eratostenesa</a></li>
-                </ul>
-
-                <hr />
-
-                <h2>Fraktale</h2>
-                <ul>
-                    <li><a href="drzewo_binarne.html">Drzewo binarne</a></li>
-                    <li><a href="smocza_krzywa.html">Smocza krzywa</a></li>
-                    <li><a href="zbior_cantora.html">Zbiór Cantora</a></li>
-                    <li><a href="krzywa_kocha.html">Krzywa Kocha</a></li>
-                    <li><a href="platek_kocha.html">Płatek Kocha</a></li>
-                    <li><a href="krzywa_minkowskiego.html">Krzywa Minkowskiego</a></li>
-                    <li><a href="krzywa_peano.html">Krzywa Peano</a></li>
-                    <li><a href="trojkat_sierpinskiego.html">Trójkąt Sierpińskiego</a></li>
-                    <li><a href="dywan_sierpinskiego.html">Dywan Sierpińskiego</a></li>
-                </ul>
-
-                <hr />
-
-                <h2>Wyszukiwanie z powrotami</h2>
-                <ul>
-                    <li><a href="n_krolowych.html">Problem n królowych</a></li>
-                </ul>
-
-
             </section>
 
         </div>
@@ -136,6 +137,7 @@
 <script src="../../../assets/js/breakpoints.min.js"></script>
 <script src="../../../assets/js/util.js"></script>
 <script src="../../../assets/js/main.js"></script>
+<script src="../../../assets/js/prism.js"></script>
 
 </body>
 </html>
