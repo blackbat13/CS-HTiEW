@@ -6,12 +6,13 @@
 -->
 <html lang="pl">
 <head>
-    <title>TTwNS - Python - Algorytmy</title>
+    <title>TTwNS - Python - Krzywa Peano</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <link rel="stylesheet" href="../../../assets/css/main.css"/>
+    <link rel="stylesheet" href="../../../assets/css/prism.css"/>
 </head>
-<body class="is-preload">
+<body class="is-preload line-numbers">
 
 <!-- Wrapper -->
 <div id="wrapper">
@@ -28,48 +29,39 @@
             <!-- Content -->
             <section>
                 <header class="main">
-                    <h1>Python - Algorytmy</h1>
+                    <h1>Python - Krzywa Peano</h1>
                 </header>
 
-                <p>Implementacje wybranych algorytmów w języku Python 3.</p>
-                <p>
-                    Tutaj znajdują się jedynie implementacje z krótkim opisem kodu.
-                    Opisy poszczególnych algorytmów można znaleźć tutaj: <a href="#">Algorytmy</a>.
-                </p>
-                <p>
-                    Wszystkie implementacje są w języku angielskim, ponieważ jest to główny język wykorzystywany w
-                    programowaniu.
-                </p>
-
-                <hr />
-
-                <h2>Algorytmy na liczbach całkowitych</h2>
-                <ul>
-                    <li><a href="test_pierwszosci.html">Test pierwszości</a></li>
-                    <li><a href="czynniki_pierwsze.html">Rozkład na czynniki pierwsze</a></li>
-                    <li><a href="doskonale.html">Test doskonałości</a></li>
-                    <li><a href="fibonacci.html">Liczby Fibonacciego</a></li>
-                    <li><a href="nwd.html">NWD</a></li>
-                    <li><a href="wydawanie_reszty.html">Wydawanie reszty</a></li>
-                    <li><a href="sito_eratostenesa.html">Sito Eratostenesa</a></li>
-                </ul>
-
-                <hr />
-
-                <h2>Fraktale</h2>
-                <ul>
-                    <li><a href="drzewo_binarne.html">Drzewo binarne</a></li>
-                    <li><a href="smocza_krzywa.html">Smocza krzywa</a></li>
-                    <li><a href="zbior_cantora.html">Zbiór Cantora</a></li>
-                    <li><a href="krzywa_kocha.html">Krzywa Kocha</a></li>
-                    <li><a href="platek_kocha.html">Płatek Kocha</a></li>
-                    <li><a href="krzywa_minkowskiego.html">Krzywa Minkowskiego</a></li>
-                    <li><a href="krzywa_peano.html">Krzywa Peano</a></li>
-                    <li><a href="trojkat_sierpinskiego.html">Trójkąt Sierpińskiego</a></li>
-                    <li><a href="dywan_sierpinskiego.html">Dywan Sierpińskiego</a></li>
-                </ul>
+                <figure>
+                    <figcaption></figcaption>
+                    <pre>
+                        <code contenteditable spellcheck="false" class="language-python">
+import turtle
 
 
+def peano_curve(rank: int, angle: int, length: float) -> None:
+    if rank > 0:
+        turtle.right(angle)
+        peano_curve(rank - 1, -angle, length)
+        turtle.forward(length)
+        peano_curve(rank - 1, angle, length)
+        turtle.forward(length)
+        peano_curve(rank - 1, -angle, length)
+        turtle.left(angle)
+
+
+turtle.speed(0)
+turtle.penup()
+turtle.back(150)
+turtle.left(90)
+turtle.forward(150)
+turtle.right(90)
+turtle.pendown()
+peano_curve(4, 90, 20)
+turtle.done()
+                        </code>
+                    </pre>
+                </figure>
             </section>
 
         </div>
@@ -129,6 +121,7 @@
 <script src="../../../assets/js/breakpoints.min.js"></script>
 <script src="../../../assets/js/util.js"></script>
 <script src="../../../assets/js/main.js"></script>
+<script src="../../../assets/js/prism.js"></script>
 
 </body>
 </html>
