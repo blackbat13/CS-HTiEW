@@ -29,83 +29,70 @@
             <!-- Content -->
             <section>
                 <header class="main">
-                    <h1>Python - Wprowadzenie<br/>Pętle</h1>
+                    <h1>Python - Wprowadzenie<br/>Instrukcje typowe dla języka Python</h1>
                 </header>
 
-                <p>Pętle w języku Python 3.</p>
-
-                <h2>Pętla iteracyjna</h2>
-
                 <p>
-                    Pętla iteracyjna w języku Python jest tak naprawdę pętlą przechodzącą przez pewien zakres wartości.
-                    Może to być lista, zbiór i inne.
-                    Wykorzystując funkcję range możemy utworzyć zakres kolejnych wartości i przez niego przejść.
+                    W Pythonie jest kilka instrukcji, które nie występują w innych językach programowania, a
+                    przynajmniej nie w takiej formie. Tutaj postaram się przedstawić takie właśnie instrukcje.
                 </p>
-                <p>Poniżej kilka przykładów konstrukcji klasycznej pętli iteracyjnej w języku Python.</p>
-                <hr/>
+
+                <h2>Instrukcje arytmetyczne</h2>
+
                 <figure>
-                    <figcaption>Wypisanie liczb od 0 do 9 włącznie:</figcaption>
+                    <figcaption>Potęgowanie</figcaption>
                     <pre>
                         <code contenteditable spellcheck="false" class="language-python">
-for i in range(10):
-    print(i)
+dwa_do_dziesiatej = 2 ** 10 # 1024
                         </code>
                     </pre>
                 </figure>
-                <hr/>
+
+                <p>Operator ** odpowiada za potęgowanie.</p>
 
                 <figure>
-                    <figcaption>Wypisanie liczb od 1 do 9 włącznie:</figcaption>
+                    <figcaption>Dzielenie całkowite</figcaption>
                     <pre>
                         <code contenteditable spellcheck="false" class="language-python">
-for i in range(1, 10):
-    print(i)
+piec_przez_dwa = 5 // 2 # 2
                         </code>
                     </pre>
                 </figure>
-                <hr/>
 
-                <figure>
-                    <figcaption>Wypisanie co drugiej wartości od 0 do 8 włącznie:</figcaption>
-                    <pre>
-                        <code contenteditable spellcheck="false" class="language-python">
-for i in range(0, 10, 2):
-    print(i)
-                        </code>
-                    </pre>
-                </figure>
-                <hr/>
+                <p>Operator // odpowiada za dzielenie całkowite.</p>
 
-                <figure>
-                    <figcaption>Wypisanie liczb od 10 do 1 włącznie:</figcaption>
-                    <pre>
-                        <code contenteditable spellcheck="false" class="language-python">
-for i in range(10, 0, -1):
-    print(i)
-                        </code>
-                    </pre>
-                </figure>
                 <hr/>
-
-                <h2>Pętla warunkowa</h2>
+                <h2>Tworzenie list</h2>
 
                 <p>
-                    Pętla warunkowa w języku Python wygląda podobnie jak w wielu innych językach.
-                    Poniżej prosty przykład.
+                    W Pythonie nowe listy są domyślnie puste. Możemy je wypełnić początkowymi wartościami, ale nie
+                    możemy im nadać początkowego rozmiaru. Instrukcja <code class="language-python">lista = [10]</code>
+                    oznacza utworzenie listy z jednym elementem: liczbą 10, a nie utworzenie listy o rozmiarze 10, jak
+                    można pomyśleć na podstawie języka C++.
+                </p>
+                <p>
+                    Jest jednak sposób na utworzenie listy o określonym rozmiarze: poprzez wypełnienie jej początkowymi
+                    wartościami. Możemy to oczywiście zrobić w pętli, ale Python daje nam prostszą konstrukcję tworzenia
+                    list: list comprehension.
                 </p>
 
                 <figure>
-                    <figcaption>Wypisanie liczb od 0 do 9 włącznie:</figcaption>
+                    <figcaption>Lista wypełniona zerami</figcaption>
                     <pre>
                         <code contenteditable spellcheck="false" class="language-python">
-i = 0
-while i < 10:
-    print(i)
-    i += 1
+lista = [0 for _ in range(10)]
                         </code>
                     </pre>
                 </figure>
 
+                <figure>
+                    <figcaption>Lista wypełniona wartościami od 0 do 9</figcaption>
+                    <pre>
+                        <code contenteditable spellcheck="false" class="language-python">
+lista = [i for i in range(10)]
+                        </code>
+                    </pre>
+                </figure>
             </section>
 
         </div>
