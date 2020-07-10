@@ -9,8 +9,8 @@
     <title>TTwNS - Python - Gry</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-    <link rel="stylesheet" href="../../../assets/css/main.css"/>
-    <link rel="stylesheet" href="../../../assets/css/prism.css"/>
+    <link rel="stylesheet" href="../../../../assets/css/main.css"/>
+    <link rel="stylesheet" href="../../../../assets/css/prism.css"/>
 </head>
 <body class="is-preload line-numbers">
 
@@ -23,38 +23,34 @@
 
             <!-- Header -->
             <header id="header">
-                <a href="../../../index.html" class="logo"><strong>Trudne Tematy w Najprostszy Sposób</strong></a>
+                <a href="../../../../index.html" class="logo"><strong>Trudne Tematy w Najprostszy Sposób</strong></a>
             </header>
 
             <!-- Content -->
             <section>
                 <header class="main">
-                    <h1>Python - Test pierwszości</h1>
+                    <h1>Python - Rozkład na czynniki pierwsze</h1>
                 </header>
 
                 <figure>
                     <figcaption></figcaption>
                     <pre>
                         <code contenteditable spellcheck="false" class="language-python">
-import math
-
-
-def is_prime(n: int) -> bool:
-    if n < 2:
-        return False
-
-    for i in range(2, int(math.sqrt(n)) + 1):
+def distribute(n: int) -> list:
+    prime_factors = []
+    i = 2
+    while n > 1:
         if n % i == 0:
-            return False
+            prime_factors.append(i)
+            n /= i
+        else:
+            i += 1
 
-    return True
+    return prime_factors
 
 
 n = int(input('Enter number: '))
-if is_prime(n):
-    print(f'{n} is a prime number')
-else:
-    print(f'{n} is not a prime number')
+print(f'Prime factors of {n}: {distribute(n)}')
                         </code>
                     </pre>
                 </figure>
@@ -68,7 +64,7 @@ else:
         <div class="inner">
 
             <section id="search" class="alt">
-                <img id="logo" src="../../../assets/images/logo.png" alt=""/>
+                <img id="logo" src="../../../../assets/images/logo.png" alt=""/>
             </section>
 
             <!-- Menu -->
@@ -77,12 +73,12 @@ else:
                     <h2>Menu</h2>
                 </header>
                 <ul>
-                    <li><a href="../../../index.html">Strona główna</a></li>
-                    <li><a href="../index.html">Python</a></li>
+                    <li><a href="../../../../index.html">Strona główna</a></li>
+                    <li><a href="../../index.html">Python</a></li>
                     <li>
                         <span class="opener active">Algorytmy</span>
                         <ul>
-                            <li><a href="index.html">Wstęp</a></li>
+                            <li><a href="../index.html">Wstęp</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -112,12 +108,12 @@ else:
 </div>
 
 <!-- Scripts -->
-<script src="../../../assets/js/jquery.min.js"></script>
-<script src="../../../assets/js/browser.min.js"></script>
-<script src="../../../assets/js/breakpoints.min.js"></script>
-<script src="../../../assets/js/util.js"></script>
-<script src="../../../assets/js/main.js"></script>
-<script src="../../../assets/js/prism.js"></script>
+<script src="../../../../assets/js/jquery.min.js"></script>
+<script src="../../../../assets/js/browser.min.js"></script>
+<script src="../../../../assets/js/breakpoints.min.js"></script>
+<script src="../../../../assets/js/util.js"></script>
+<script src="../../../../assets/js/main.js"></script>
+<script src="../../../../assets/js/prism.js"></script>
 
 </body>
 </html>

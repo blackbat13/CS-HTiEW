@@ -6,11 +6,11 @@
 -->
 <html lang="pl">
 <head>
-    <title>TTwNS - Python - Smocza krzywa</title>
+    <title>TTwNS - Python - Gry</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-    <link rel="stylesheet" href="../../../assets/css/main.css"/>
-    <link rel="stylesheet" href="../../../assets/css/prism.css"/>
+    <link rel="stylesheet" href="../../../../assets/css/main.css"/>
+    <link rel="stylesheet" href="../../../../assets/css/prism.css"/>
 </head>
 <body class="is-preload line-numbers">
 
@@ -23,41 +23,44 @@
 
             <!-- Header -->
             <header id="header">
-                <a href="../../../index.html" class="logo"><strong>Trudne Tematy w Najprostszy Sposób</strong></a>
+                <a href="../../../../index.html" class="logo"><strong>Trudne Tematy w Najprostszy Sposób</strong></a>
             </header>
 
             <!-- Content -->
             <section>
                 <header class="main">
-                    <h1>Python - Smocza krzywa</h1>
+                    <h1>Python - Drzewo binarne</h1>
                 </header>
 
                 <figure>
-                    <figcaption></figcaption>
+                    <figcaption>
+                        <a href="https://repl.it/@damiankurpiewski/Binary-Tree#main.py">
+                            https://repl.it/@damiankurpiewski/Binary-Tree#main.py
+                        </a>
+                    </figcaption>
                     <pre>
                         <code contenteditable spellcheck="false" class="language-python">
 import turtle
 
 
-def dragon_curve(rank: int, sign: int, length: float) -> None:
+def binary_tree(rank: int, length: float) -> None:
+    turtle.forward(length)
     if rank > 0:
-        turtle.left(45 * sign)
-        dragon_curve(rank - 1, 1, length)
-        turtle.right(90 * sign * -1)
-        dragon_curve(rank - 1, -1, length)
-        turtle.left(45 * sign)
-    else:
-        turtle.forward(length)
+        turtle.left(45)
+        binary_tree(rank - 1, length / 2)
+        turtle.right(90)
+        binary_tree(rank - 1, length / 2)
+        turtle.left(45)
+    turtle.back(length)
 
 
 turtle.speed(0)
 turtle.penup()
-turtle.back(150)
 turtle.left(90)
-turtle.forward(150)
-turtle.right(90)
+turtle.back(350)
 turtle.pendown()
-dragon_curve(10, 1, 5)
+turtle.pensize(3)
+binary_tree(5, 400)
 turtle.done()
                         </code>
                     </pre>
@@ -72,7 +75,7 @@ turtle.done()
         <div class="inner">
 
             <section id="search" class="alt">
-                <img id="logo" src="../../../assets/images/logo.png" alt=""/>
+                <img id="logo" src="../../../../assets/images/logo.png" alt=""/>
             </section>
 
             <!-- Menu -->
@@ -81,12 +84,12 @@ turtle.done()
                     <h2>Menu</h2>
                 </header>
                 <ul>
-                    <li><a href="../../../index.html">Strona główna</a></li>
-                    <li><a href="../index.html">Python</a></li>
+                    <li><a href="../../../../index.html">Strona główna</a></li>
+                    <li><a href="../../index.html">Python</a></li>
                     <li>
                         <span class="opener active">Algorytmy</span>
                         <ul>
-                            <li><a href="index.html">Wstęp</a></li>
+                            <li><a href="../index.html">Wstęp</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -116,12 +119,12 @@ turtle.done()
 </div>
 
 <!-- Scripts -->
-<script src="../../../assets/js/jquery.min.js"></script>
-<script src="../../../assets/js/browser.min.js"></script>
-<script src="../../../assets/js/breakpoints.min.js"></script>
-<script src="../../../assets/js/util.js"></script>
-<script src="../../../assets/js/main.js"></script>
-<script src="../../../assets/js/prism.js"></script>
+<script src="../../../../assets/js/jquery.min.js"></script>
+<script src="../../../../assets/js/browser.min.js"></script>
+<script src="../../../../assets/js/breakpoints.min.js"></script>
+<script src="../../../../assets/js/util.js"></script>
+<script src="../../../../assets/js/main.js"></script>
+<script src="../../../../assets/js/prism.js"></script>
 
 </body>
 </html>

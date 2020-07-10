@@ -6,11 +6,11 @@
 -->
 <html lang="pl">
 <head>
-    <title>TTwNS - Python - Gry</title>
+    <title>TTwNS - Python - Krzywa Peano</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-    <link rel="stylesheet" href="../../../assets/css/main.css"/>
-    <link rel="stylesheet" href="../../../assets/css/prism.css"/>
+    <link rel="stylesheet" href="../../../../assets/css/main.css"/>
+    <link rel="stylesheet" href="../../../../assets/css/prism.css"/>
 </head>
 <body class="is-preload line-numbers">
 
@@ -23,33 +23,46 @@
 
             <!-- Header -->
             <header id="header">
-                <a href="../../../index.html" class="logo"><strong>Trudne Tematy w Najprostszy Sposób</strong></a>
+                <a href="../../../../index.html" class="logo"><strong>Trudne Tematy w Najprostszy Sposób</strong></a>
             </header>
 
             <!-- Content -->
             <section>
                 <header class="main">
-                    <h1>Python - Test doskonałości</h1>
+                    <h1>Python - Krzywa Peano</h1>
                 </header>
 
                 <figure>
-                    <figcaption></figcaption>
+                    <figcaption>
+                        <a href="https://repl.it/@damiankurpiewski/Peano-Curve#main.py">
+                            https://repl.it/@damiankurpiewski/Peano-Curve#main.py
+                        </a>
+                    </figcaption>
                     <pre>
                         <code contenteditable spellcheck="false" class="language-python">
-def is_perfect(n: int) -> bool:
-    sum = 0
-    for i in range(1, n):
-        if n % i == 0:
-            sum += i
-
-    return sum == n
+import turtle
 
 
-n = int(input('Enter number: '))
-if is_perfect(n):
-    print(f'{n} is a perfect number')
-else:
-    print(f'{n} is not a perfect number')
+def peano_curve(rank: int, angle: int, length: float) -> None:
+    if rank > 0:
+        turtle.right(angle)
+        peano_curve(rank - 1, -angle, length)
+        turtle.forward(length)
+        peano_curve(rank - 1, angle, length)
+        turtle.forward(length)
+        peano_curve(rank - 1, -angle, length)
+        turtle.left(angle)
+
+
+turtle.speed(0)
+turtle.penup()
+turtle.back(150)
+turtle.left(90)
+turtle.forward(150)
+turtle.right(90)
+turtle.pendown()
+peano_curve(4, 90, 20)
+turtle.done()
                         </code>
                     </pre>
                 </figure>
@@ -63,7 +76,7 @@ else:
         <div class="inner">
 
             <section id="search" class="alt">
-                <img id="logo" src="../../../assets/images/logo.png" alt=""/>
+                <img id="logo" src="../../../../assets/images/logo.png" alt=""/>
             </section>
 
             <!-- Menu -->
@@ -72,12 +85,12 @@ else:
                     <h2>Menu</h2>
                 </header>
                 <ul>
-                    <li><a href="../../../index.html">Strona główna</a></li>
-                    <li><a href="../index.html">Python</a></li>
+                    <li><a href="../../../../index.html">Strona główna</a></li>
+                    <li><a href="../../index.html">Python</a></li>
                     <li>
                         <span class="opener active">Algorytmy</span>
                         <ul>
-                            <li><a href="index.html">Wstęp</a></li>
+                            <li><a href="../index.html">Wstęp</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -107,12 +120,12 @@ else:
 </div>
 
 <!-- Scripts -->
-<script src="../../../assets/js/jquery.min.js"></script>
-<script src="../../../assets/js/browser.min.js"></script>
-<script src="../../../assets/js/breakpoints.min.js"></script>
-<script src="../../../assets/js/util.js"></script>
-<script src="../../../assets/js/main.js"></script>
-<script src="../../../assets/js/prism.js"></script>
+<script src="../../../../assets/js/jquery.min.js"></script>
+<script src="../../../../assets/js/browser.min.js"></script>
+<script src="../../../../assets/js/breakpoints.min.js"></script>
+<script src="../../../../assets/js/util.js"></script>
+<script src="../../../../assets/js/main.js"></script>
+<script src="../../../../assets/js/prism.js"></script>
 
 </body>
 </html>

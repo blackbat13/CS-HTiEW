@@ -9,8 +9,8 @@
     <title>TTwNS - Python - Gry</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-    <link rel="stylesheet" href="../../../assets/css/main.css"/>
-    <link rel="stylesheet" href="../../../assets/css/prism.css"/>
+    <link rel="stylesheet" href="../../../../assets/css/main.css"/>
+    <link rel="stylesheet" href="../../../../assets/css/prism.css"/>
 </head>
 <body class="is-preload line-numbers">
 
@@ -23,53 +23,38 @@
 
             <!-- Header -->
             <header id="header">
-                <a href="../../../index.html" class="logo"><strong>Trudne Tematy w Najprostszy Sposób</strong></a>
+                <a href="../../../../index.html" class="logo"><strong>Trudne Tematy w Najprostszy Sposób</strong></a>
             </header>
 
             <!-- Content -->
             <section>
                 <header class="main">
-                    <h1>Python - NWD</h1>
+                    <h1>Python - Test pierwszości</h1>
                 </header>
 
                 <figure>
                     <figcaption></figcaption>
                     <pre>
                         <code contenteditable spellcheck="false" class="language-python">
-def gcd_iterative(a: int, b: int) -> int:
-    while b != 0:
-        b2 = b
-        b = a % b
-        a = b2
-
-    return a
+import math
 
 
-def gcd_recursive(a: int, b: int) -> int:
-    if b == 0:
-        return a
-    return gcd_recursive(b, a % b)
+def is_prime(n: int) -> bool:
+    if n < 2:
+        return False
+
+    for i in range(2, int(math.sqrt(n)) + 1):
+        if n % i == 0:
+            return False
+
+    return True
 
 
-def subtraction_gcd(a: int, b: int) -> int:
-    while a > 0 and b > 0:
-        if a > b:
-            a -= b
-        else:
-            b -= a
-
-    if a == 0:
-        return b
-    else:
-        return a
-
-
-a = int(input('Enter a: '))
-b = int(input('Enter b: '))
-
-print(f'Iterative GCD({a},{b}) = {gcd_iterative(a, b)}')
-print(f'Recursive GCD({a},{b}) = {gcd_recursive(a, b)}')
-print(f'Subtraction GCD({a},{b}) = {subtraction_gcd(a, b)}')
+n = int(input('Enter number: '))
+if is_prime(n):
+    print(f'{n} is a prime number')
+else:
+    print(f'{n} is not a prime number')
                         </code>
                     </pre>
                 </figure>
@@ -83,7 +68,7 @@ print(f'Subtraction GCD({a},{b}) = {subtraction_gcd(a, b)}')
         <div class="inner">
 
             <section id="search" class="alt">
-                <img id="logo" src="../../../assets/images/logo.png" alt=""/>
+                <img id="logo" src="../../../../assets/images/logo.png" alt=""/>
             </section>
 
             <!-- Menu -->
@@ -92,12 +77,12 @@ print(f'Subtraction GCD({a},{b}) = {subtraction_gcd(a, b)}')
                     <h2>Menu</h2>
                 </header>
                 <ul>
-                    <li><a href="../../../index.html">Strona główna</a></li>
-                    <li><a href="../index.html">Python</a></li>
+                    <li><a href="../../../../index.html">Strona główna</a></li>
+                    <li><a href="../../index.html">Python</a></li>
                     <li>
                         <span class="opener active">Algorytmy</span>
                         <ul>
-                            <li><a href="index.html">Wstęp</a></li>
+                            <li><a href="../index.html">Wstęp</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -127,12 +112,12 @@ print(f'Subtraction GCD({a},{b}) = {subtraction_gcd(a, b)}')
 </div>
 
 <!-- Scripts -->
-<script src="../../../assets/js/jquery.min.js"></script>
-<script src="../../../assets/js/browser.min.js"></script>
-<script src="../../../assets/js/breakpoints.min.js"></script>
-<script src="../../../assets/js/util.js"></script>
-<script src="../../../assets/js/main.js"></script>
-<script src="../../../assets/js/prism.js"></script>
+<script src="../../../../assets/js/jquery.min.js"></script>
+<script src="../../../../assets/js/browser.min.js"></script>
+<script src="../../../../assets/js/breakpoints.min.js"></script>
+<script src="../../../../assets/js/util.js"></script>
+<script src="../../../../assets/js/main.js"></script>
+<script src="../../../../assets/js/prism.js"></script>
 
 </body>
 </html>

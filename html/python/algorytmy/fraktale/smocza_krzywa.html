@@ -6,11 +6,11 @@
 -->
 <html lang="pl">
 <head>
-    <title>TTwNS - Python - Dywan Sierpińskiego</title>
+    <title>TTwNS - Python - Smocza krzywa</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-    <link rel="stylesheet" href="../../../assets/css/main.css"/>
-    <link rel="stylesheet" href="../../../assets/css/prism.css"/>
+    <link rel="stylesheet" href="../../../../assets/css/main.css"/>
+    <link rel="stylesheet" href="../../../../assets/css/prism.css"/>
 </head>
 <body class="is-preload line-numbers">
 
@@ -23,45 +23,45 @@
 
             <!-- Header -->
             <header id="header">
-                <a href="../../../index.html" class="logo"><strong>Trudne Tematy w Najprostszy Sposób</strong></a>
+                <a href="../../../../index.html" class="logo"><strong>Trudne Tematy w Najprostszy Sposób</strong></a>
             </header>
 
             <!-- Content -->
             <section>
                 <header class="main">
-                    <h1>Python - Dywan Sierpińskiego</h1>
+                    <h1>Python - Smocza krzywa</h1>
                 </header>
 
                 <figure>
-                    <figcaption></figcaption>
+                    <figcaption>
+                        <a href="https://repl.it/@damiankurpiewski/Dragon-Curve#main.py">
+                            https://repl.it/@damiankurpiewski/Dragon-Curve#main.py
+                        </a>
+                    </figcaption>
                     <pre>
                         <code contenteditable spellcheck="false" class="language-python">
 import turtle
 
 
-def sierpinski_square(rank: int, length: float) -> None:
-    if rank == 0:
-        turtle.begin_fill()
-        for _ in range(0, 4):
-            turtle.forward(length)
-            turtle.left(90)
-        turtle.end_fill()
-        return
-
-    for _ in range(0, 4):
-        for _ in range(0, 2):
-            turtle.forward(length / 3)
-            sierpinski_square(rank - 1, length / 3)
-        turtle.forward(length / 3)
-        turtle.left(90)
+def dragon_curve(rank: int, sign: int, length: float) -> None:
+    if rank > 0:
+        turtle.left(45 * sign)
+        dragon_curve(rank - 1, 1, length)
+        turtle.right(90 * sign * -1)
+        dragon_curve(rank - 1, -1, length)
+        turtle.left(45 * sign)
+    else:
+        turtle.forward(length)
 
 
-turtle.color('blue')
 turtle.speed(0)
 turtle.penup()
-turtle.back(200)
+turtle.back(150)
+turtle.left(90)
+turtle.forward(150)
+turtle.right(90)
 turtle.pendown()
-sierpinski_square(2, 300)
+dragon_curve(10, 1, 5)
 turtle.done()
                         </code>
                     </pre>
@@ -76,7 +76,7 @@ turtle.done()
         <div class="inner">
 
             <section id="search" class="alt">
-                <img id="logo" src="../../../assets/images/logo.png" alt=""/>
+                <img id="logo" src="../../../../assets/images/logo.png" alt=""/>
             </section>
 
             <!-- Menu -->
@@ -85,12 +85,12 @@ turtle.done()
                     <h2>Menu</h2>
                 </header>
                 <ul>
-                    <li><a href="../../../index.html">Strona główna</a></li>
-                    <li><a href="../index.html">Python</a></li>
+                    <li><a href="../../../../index.html">Strona główna</a></li>
+                    <li><a href="../../index.html">Python</a></li>
                     <li>
                         <span class="opener active">Algorytmy</span>
                         <ul>
-                            <li><a href="index.html">Wstęp</a></li>
+                            <li><a href="../index.html">Wstęp</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -120,12 +120,12 @@ turtle.done()
 </div>
 
 <!-- Scripts -->
-<script src="../../../assets/js/jquery.min.js"></script>
-<script src="../../../assets/js/browser.min.js"></script>
-<script src="../../../assets/js/breakpoints.min.js"></script>
-<script src="../../../assets/js/util.js"></script>
-<script src="../../../assets/js/main.js"></script>
-<script src="../../../assets/js/prism.js"></script>
+<script src="../../../../assets/js/jquery.min.js"></script>
+<script src="../../../../assets/js/browser.min.js"></script>
+<script src="../../../../assets/js/breakpoints.min.js"></script>
+<script src="../../../../assets/js/util.js"></script>
+<script src="../../../../assets/js/main.js"></script>
+<script src="../../../../assets/js/prism.js"></script>
 
 </body>
 </html>

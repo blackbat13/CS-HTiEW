@@ -6,11 +6,11 @@
 -->
 <html lang="pl">
 <head>
-    <title>TTwNS - Python - Gry</title>
+    <title>TTwNS - Python - Krzywa Kocha</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-    <link rel="stylesheet" href="../../../assets/css/main.css"/>
-    <link rel="stylesheet" href="../../../assets/css/prism.css"/>
+    <link rel="stylesheet" href="../../../../assets/css/main.css"/>
+    <link rel="stylesheet" href="../../../../assets/css/prism.css"/>
 </head>
 <body class="is-preload line-numbers">
 
@@ -23,42 +23,45 @@
 
             <!-- Header -->
             <header id="header">
-                <a href="../../../index.html" class="logo"><strong>Trudne Tematy w Najprostszy Sposób</strong></a>
+                <a href="../../../../index.html" class="logo"><strong>Trudne Tematy w Najprostszy Sposób</strong></a>
             </header>
 
             <!-- Content -->
             <section>
                 <header class="main">
-                    <h1>Python - Liczby Fibonacciego</h1>
+                    <h1>Python - Krzywa Kocha</h1>
                 </header>
 
                 <figure>
-                    <figcaption></figcaption>
+                    <figcaption>
+                        <a href="https://repl.it/@damiankurpiewski/Koch-Curve#main.py">
+                            https://repl.it/@damiankurpiewski/Koch-Curve#main.py
+                        </a>
+                    </figcaption>
                     <pre>
                         <code contenteditable spellcheck="false" class="language-python">
-def fibonacci_iterative(n: int) -> int:
-    if n <= 2:
-        return 1
-
-    f1 = 1
-    f2 = 1
-    for i in range(3, n + 1):
-        f3 = f1 + f2
-        f1 = f2
-        f2 = f3
-
-    return f2
+import turtle
 
 
-def fibonacci_recursive(n: int) -> int:
-    if n <= 2:
-        return 1
-    return fibonacci_recursive(n - 1) + fibonacci_recursive(n - 2)
+def koch_curve(rank: int, length: float) -> None:
+    if rank > 0:
+        koch_curve(rank - 1, length / 2)
+        turtle.left(60)
+        koch_curve(rank - 1, length / 2)
+        turtle.right(120)
+        koch_curve(rank - 1, length / 2)
+        turtle.left(60)
+        koch_curve(rank - 1, length / 2)
+    else:
+        turtle.forward(length)
 
 
-n = int(input('Enter number to compute: '))
-print(f'Iterative: {fibonacci_iterative(n)}')
-print(f'Recursive: {fibonacci_recursive(n)}')
+turtle.speed(0)
+turtle.penup()
+turtle.back(350)
+turtle.pendown()
+koch_curve(3, 200)
+turtle.done()
                         </code>
                     </pre>
                 </figure>
@@ -72,7 +75,7 @@ print(f'Recursive: {fibonacci_recursive(n)}')
         <div class="inner">
 
             <section id="search" class="alt">
-                <img id="logo" src="../../../assets/images/logo.png" alt=""/>
+                <img id="logo" src="../../../../assets/images/logo.png" alt=""/>
             </section>
 
             <!-- Menu -->
@@ -81,12 +84,12 @@ print(f'Recursive: {fibonacci_recursive(n)}')
                     <h2>Menu</h2>
                 </header>
                 <ul>
-                    <li><a href="../../../index.html">Strona główna</a></li>
-                    <li><a href="../index.html">Python</a></li>
+                    <li><a href="../../../../index.html">Strona główna</a></li>
+                    <li><a href="../../index.html">Python</a></li>
                     <li>
                         <span class="opener active">Algorytmy</span>
                         <ul>
-                            <li><a href="index.html">Wstęp</a></li>
+                            <li><a href="../index.html">Wstęp</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -116,12 +119,12 @@ print(f'Recursive: {fibonacci_recursive(n)}')
 </div>
 
 <!-- Scripts -->
-<script src="../../../assets/js/jquery.min.js"></script>
-<script src="../../../assets/js/browser.min.js"></script>
-<script src="../../../assets/js/breakpoints.min.js"></script>
-<script src="../../../assets/js/util.js"></script>
-<script src="../../../assets/js/main.js"></script>
-<script src="../../../assets/js/prism.js"></script>
+<script src="../../../../assets/js/jquery.min.js"></script>
+<script src="../../../../assets/js/browser.min.js"></script>
+<script src="../../../../assets/js/breakpoints.min.js"></script>
+<script src="../../../../assets/js/util.js"></script>
+<script src="../../../../assets/js/main.js"></script>
+<script src="../../../../assets/js/prism.js"></script>
 
 </body>
 </html>
