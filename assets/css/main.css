@@ -3533,3 +3533,7 @@ pre.line-numbers > code {
     overflow: visible;
     padding: 0;
 }
+
+.bold {
+    font-weight: bold;
+}

@@ -10,8 +10,9 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <link rel="stylesheet" href="../../../assets/css/main.css"/>
+    <link rel="stylesheet" href="../../../assets/css/prism.css"/>
 </head>
-<body class="is-preload">
+<body class="is-preload line-numbers">
 
 <!-- Wrapper -->
 <div id="wrapper">
@@ -28,23 +29,134 @@
             <!-- Content -->
             <section>
                 <header class="main">
-                    <h1>Python - Gry</h1>
+                    <h1>Spotkanie 1</h1>
+                    <h2>Proste gry tekstowe - wprowadzenie do programowania w języku Python</h2>
                 </header>
 
                 <p>
-                    Tutaj znajduje się kurs nauki języka Python poprzez tworzenie gier.
-                    Kurs prowadzony jest w ramach zajęć Uniwersytetu Młodych organizowanego przez fundację Amicus.
+                    <span class="bold">Czego się nauczymy:</span>
+                    komunikacja komputera z użytkownikiem, wczytywanie liczb od użytkownika, wypisywanie komunikatów,
+                    tworzenie zmiennych, proste operacje arytmetyczne na zmiennych, losowanie liczb, pętle iteracyjne i
+                    warunkowe, instrukcje warunkowe.
+                </p>
+
+                <h3>Gra 1: Większa liczba wygrywa!</h3>
+
+                <p>
+                    <span class="bold">Zasady gry</span>: dwóch graczy po kolei podaje swoją liczbę. Ten, który poda
+                    większą, wygrywa!
                 </p>
                 <p>
-                    Kurs składa się z 18 dwu-godzinnych spotkań.
-                    Skierowany jest do osób w wieku 13-16 lat i nie wymaga żadnej wcześniejszej wiedzy z zakresu
-                    programowania.
-                    Celem kursu jest wporwadzenie uczniów do zagadnień związanych z programowaniem i tworzeniem gier.
-                    Kurs nie ma na celu pełnego nauczenia zagadnień algorytmicznych czy technicznych związanych z
-                    programowaniem, a raczej ma służyć jako ciekawe wprowadzenie do programowania.
-                    Co za tym idzie na zajęciach stosowanych będzie wiele uproszczeń i umownych zasad, tak aby na każdym
-                    spotkaniu osiągnąć zamierzony cel: stworzenie swojej własnej gry od początku do końca.
+                    To jest bardzo prosta gra, w której drugi gracz zawsze wygrywa. Jego strategia jest prosta: czeka,
+                    aż pierwszy gracz poda swoją liczbę, a następnie podaje o jeden większą! W ten sposób zawsze wygra.
                 </p>
+                <p>
+                    W naszej grze rolę pierwszego gracza spełni użytkownik, a drugim graczem będzie komputer.
+                </p>
+
+                <figure>
+                    <figcaption>Gra 1:</figcaption>
+                    <pre>
+                        <code contenteditable spellcheck="false" class="language-python">
+liczba = int(input("Podaj liczbę: "))
+
+nowa_liczba = liczba + 1
+
+print(nowa_liczba)
+print("Wygrałem!")
+                        </code>
+                    </pre>
+                </figure>
+
+                <h3>Rzut sześcienną kostką</h3>
+
+                <figure>
+                    <figcaption>Gra 2:</figcaption>
+                    <pre>
+                        <code contenteditable spellcheck="false" class="language-python">
+import random
+
+
+wynik = random.randint(1, 6)
+
+print("Kości zostały rzucone...")
+print("Wynik to", wynik)
+                        </code>
+                    </pre>
+                </figure>
+
+                <h3>Wielokrotny rzut kostką</h3>
+
+                <figure>
+                    <figcaption>Gra 3:</figcaption>
+                    <pre>
+                        <code contenteditable spellcheck="false" class="language-python">
+import random
+
+
+ile_razy = int(input("Podaj ilość rzutów kostką: "))
+
+for i in range(ile_razy):
+    wynik = random.randint(1, 6)
+
+    print("Kości zostały rzucone...")
+    print("Wynik to", wynik)
+                        </code>
+                    </pre>
+                </figure>
+
+                <h3>Zliczanie szóstek</h3>
+
+                <figure>
+                    <figcaption>Gra 4:</figcaption>
+                    <pre>
+                        <code contenteditable spellcheck="false" class="language-python">
+import random
+
+ile_razy = int(input("Podaj ilość rzutów kostką: "))
+
+szostki = 0
+
+for i in range(ile_razy):
+    wynik = random.randint(1, 6)
+
+    print("Kości zostały rzucone...")
+    print("Wynik to", wynik)
+
+    if wynik == 6:
+        szostki += 1
+
+print("Szóstka wypadła", szostki, "razy")
+                        </code>
+                    </pre>
+                </figure>
+
+                <h3>Gra w ciepło-zimno</h3>
+
+                <figure>
+                    <figcaption>Gra 5:</figcaption>
+                    <pre>
+                        <code contenteditable spellcheck="false" class="language-python">
+import random
+
+
+ukryta = random.randint(1, 100)
+
+liczba = int(input("Podaj liczbę: "))
+
+while liczba != ukryta:
+    if ukryta < liczba:
+        print("Mniejsza!")
+    if ukryta > liczba:
+        print("Większa!")
+
+    liczba = int(input("Podaj liczbę: "))
+
+print("Trafiona!")
+                        </code>
+                    </pre>
+                </figure>
+
             </section>
 
         </div>
@@ -122,6 +234,7 @@
 <script src="../../../assets/js/breakpoints.min.js"></script>
 <script src="../../../assets/js/util.js"></script>
 <script src="../../../assets/js/main.js"></script>
+<script src="../../../assets/js/prism.js"></script>
 
 </body>
 </html>
